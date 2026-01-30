@@ -1,0 +1,16 @@
+@use '../abstract/maps' as m;
+@use '../abstract/variables' as v;
+@use 'sass:map';
+@use 'sass:color';
+
+.alert {
+  padding: map.get(m.$spacing-scale, md);
+  border-radius: v.$radius-sm;
+
+  @each $name, $color in m.$colors {
+    &--#{$name} {
+      background-color: color.adjust($color, $lightness: 40%); // reemplaza lighten()
+      color: $color;
+    }
+  }
+}

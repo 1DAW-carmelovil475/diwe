@@ -1,0 +1,15 @@
+@use '../abstract/maps' as m;
+@use '../abstract/variables' as v;
+@use 'sass:map';
+
+.form-control {
+  width: 100%;
+  padding: map.get(m.$spacing-scale, sm);
+  border-radius: v.$radius-sm;
+  border: 1px solid #ccc;
+
+  &:focus {
+    outline: none;
+    border-color: map.get(m.$colors, primary);
+  }
+}

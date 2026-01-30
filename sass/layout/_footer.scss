@@ -1,0 +1,7 @@
+@use '../abstract/maps' as m;
+@use 'sass:map';
+
+.footer {
+    padding: map-get(m.$spacing-scale, md);
+}
+  

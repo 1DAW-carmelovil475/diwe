@@ -1,0 +1,18 @@
+@use '../abstract/mixins' as mix;
+@use '../abstract/maps' as m;
+@use 'sass:math';
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@each $bp, $size in m.$breakpoints {
+  @include mix.respond($bp) {
+    @for $i from 1 through 12 {
+      .col-#{$i}-#{$bp} {
+        width: math.div(100%, 12) * $i; // reemplaza / por math.div()
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@use '../abstract/maps' as m;
+
+@each $name, $color in m.$colors {
+  .text-#{$name} { color: $color; }
+  .bg-#{$name} { background-color: $color; }
+}

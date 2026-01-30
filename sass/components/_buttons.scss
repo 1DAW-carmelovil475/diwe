@@ -1,0 +1,20 @@
+@use '../abstract/maps' as m;
+@use '../abstract/variables' as v;
+@use '../abstract/functions' as f;
+@use '../abstract/mixins' as mix;
+@use 'sass:map';
+
+.btn {
+  border: none;
+  cursor: pointer;
+  border-radius: v.$radius-md;
+
+  @each $name, $color in m.$colors {
+    &--#{$name} {
+      background-color: $color;
+      color: f.contrast($color);
+      padding: map.get(m.$spacing-scale, sm) map.get(m.$spacing-scale, md);
+      @include mix.interactive;
+    }
+  }
+}

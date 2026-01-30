@@ -1,0 +1,7 @@
+@use '../abstract/maps' as m;
+@use 'sass:map';
+
+@each $name, $space in m.$spacing-scale {
+  .m-#{$name} { margin: $space; }
+  .p-#{$name} { padding: $space; }
+}

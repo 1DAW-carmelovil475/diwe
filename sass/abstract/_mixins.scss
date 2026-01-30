@@ -1,0 +1,16 @@
+@use '../abstract/maps' as m;
+@use 'sass:map';
+
+@mixin respond($breakpoint) {
+  @if map.has-key(m.$breakpoints, $breakpoint) {
+    @media (min-width: map.get(m.$breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+@mixin interactive {
+  &:hover { opacity: 0.9; }
+  &:focus { outline: 2px solid currentColor; }
+  &:disabled { opacity: 0.5; cursor: not-allowed; }
+}

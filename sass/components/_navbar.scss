@@ -1,0 +1,7 @@
+@use '../abstract/maps' as m;
+@use 'sass:map';
+
+.navbar {
+  display: flex;
+  gap: map.get(m.$spacing-scale, md);
+}

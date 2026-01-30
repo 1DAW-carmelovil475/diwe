@@ -6,7 +6,7 @@
   width: 100%;
   padding: map.get(m.$spacing-scale, sm);
   border-radius: v.$radius-sm;
-  border: 1px solid #ccc;
+  border: 1px solid lightgray;
 
   &:focus {
     outline: none;

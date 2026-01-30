@@ -9,7 +9,7 @@
 
   @each $name, $color in m.$colors {
     &--#{$name} {
-      background-color: color.adjust($color, $lightness: 40%); // reemplaza lighten()
+      background-color: color.adjust($color, $lightness: 40%); 
       color: $color;
     }
   }

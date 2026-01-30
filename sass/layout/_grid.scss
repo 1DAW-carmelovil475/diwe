@@ -11,7 +11,7 @@
   @include mix.respond($bp) {
     @for $i from 1 through 12 {
       .col-#{$i}-#{$bp} {
-        width: math.div(100%, 12) * $i; // reemplaza / por math.div()
+        width: math.div(100%, 12) * $i; 
       }
     }
   }

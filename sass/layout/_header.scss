@@ -2,6 +2,6 @@
 @use 'sass:map';
 
 .header {
-    padding: map-get(m.$spacing-scale, md);
+    padding: map.get(m.$spacing-scale, md);
 }
   
